@@ -2,21 +2,25 @@
 
 import Toggle from '@/components/elements/Button/Toggle'
 import NavLink from '@/components/elements/Nav/NavLink'
-import { usePathname, useRouter } from 'next/navigation'
-import React, { MouseEvent, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import React, { MouseEvent, useState, useEffect } from 'react'
 import { FaBars, FaChartPie, FaClipboardList } from 'react-icons/fa6'
 import { BiSolidBookContent } from 'react-icons/bi'
 import { FaUsers, FaTicketAlt } from 'react-icons/fa'
-import Button from '@/components/elements/Button/Button'
 
 const MobileNav = () => {
 
     const currentPath = usePathname()
     const [navIsActive, setNavIsActive] = useState<boolean>(false)
 
+    useEffect(() => {
+        setNavIsActive(false)
+    }, [currentPath])
+
     const handleNavToggle = (e : MouseEvent<HTMLButtonElement>) => {
         setNavIsActive(!navIsActive)
-    } 
+    }
+    
 
   return (
     <>
