@@ -1,8 +1,14 @@
+import MobileNav from '@/components/modules/Navigation/Navbar/MobileNav'
 import React from 'react'
 
-const layout = () => {
+const layout = ({children} : {children : React.ReactNode}  ) => {
   return (
-    <div>layout</div>
+    <div>
+      <MobileNav/>
+      <main className='bg-sky-800'>
+        {children}
+      </main>
+    </div>
   )
 }
 
