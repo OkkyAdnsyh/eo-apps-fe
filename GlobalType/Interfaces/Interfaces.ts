@@ -8,3 +8,10 @@ export interface IUserRegisterData{
     email : string,
     password : string
 }
+
+export interface INotif{
+    id : number,
+    url : string,
+    status : boolean,
+    message : string
+}
