@@ -7,6 +7,7 @@ import React, { MouseEvent, useState, useEffect } from 'react'
 import { FaBars, FaChartPie, FaClipboardList } from 'react-icons/fa6'
 import { BiSolidBookContent } from 'react-icons/bi'
 import { FaUsers, FaTicketAlt } from 'react-icons/fa'
+import Notification from '@/components/modules/Notification/Notification'
 
 const MobileNav = () => {
 
@@ -26,8 +27,11 @@ const MobileNav = () => {
     <>
         <header className='fixed top-0 w-screen flex items-center justify-between p-4 z-50 lg:hidden'>
             <Toggle onClick={handleNavToggle}>
-                <FaBars style={{fontSize : '36px', color : "#ffffff"}} />
+                <FaBars style={{fontSize : '28px', color : "#ffffff"}} />
             </Toggle>
+            <div className='relative flex items-center justify-between gap-x-2 h-full'>
+                <Notification/>
+            </div>
         </header>
         <aside className={`fixed top-0 w-screen bg-slate-900 z-10 h-screen pl-6 pt-20 flex flex-col gap-y-6 ${navIsActive ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-500 lg:hidden`}>
             <NavLink href={'/Dashboard'} className={`text-lg font-bold text-gray-50 ${currentPath === '/Dashboard' && 'bg-sky-700'} rounded-tl-md rounded-bl-md`}>
