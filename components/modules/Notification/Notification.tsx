@@ -46,7 +46,7 @@ const Notification = () => {
                 return (
                     <li key={item.id}>
                         <DropItem className='w-full h-20 block'>
-                            <Link href={item.url} className={`flex items-center justify-start p-3 text-md font-semibold text-gray-100 w-full h-full ${item.status ? 'bg-gray-50' : 'bg-gray-200/60'} border-b-2 border-b-sky-500/30`} onClick={(e : MouseEvent<HTMLAnchorElement>) => {
+                            <Link href={item.url} className={`flex items-center justify-start p-3 text-md font-semibold w-full h-full ${item.status ? 'bg-gray-50 text-gray-500' : 'bg-gray-200/60 text-gray-100'} border-b-2 border-b-sky-500/30`} onClick={(e : MouseEvent<HTMLAnchorElement>) => {
                                 setNotif((prevState : INotif[]) : INotif[] => {
                                     return prevState.map((notif : INotif) : INotif => {
                                         if(notif.id === item.id){
