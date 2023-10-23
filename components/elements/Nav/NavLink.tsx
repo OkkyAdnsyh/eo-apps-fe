@@ -8,7 +8,7 @@ interface INavLinkProps extends LinkProps{
 
 const NavLink = ({children, className,...rest} : INavLinkProps) => {
   return (
-    <Link className={`w-full p-6 flex items-center justify-start gap-x-6 ${className}`} {...rest}>
+    <Link className={`w-full p-5 flex items-center justify-start gap-x-6 ${className}`} {...rest}>
         {children}
     </Link>
   )

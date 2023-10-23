@@ -33,12 +33,12 @@ const MobileNav = () => {
     <>
         <header className='fixed top-0 w-screen flex items-center justify-between p-4 z-50 lg:hidden'>
             <Toggle onClick={handleNavToggle}>
-                <FaBars style={{fontSize : '28px', color : "#ffffff"}} />
+                <FaBars style={{fontSize : '28px', color : `${navIsActive || settingIsActive ? "#ffffff" : "#232323"}`}} />
             </Toggle>
             <div className='relative flex items-center justify-between gap-x-2 h-full'>
                 <Notification/>
                 <Toggle onClick={handleSettingToggle}>
-                    <BsPersonFillGear style={{fontSize : '28px', color : "#ffffff"}} />
+                    <BsPersonFillGear style={{fontSize : '28px', color : `${navIsActive || settingIsActive ? "#ffffff" : "#232323"}`}} />
                 </Toggle>
             </div>
         </header>
