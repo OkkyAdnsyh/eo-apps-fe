@@ -1,8 +1,13 @@
+import PageNav from '@/components/modules/Navigation/Navbar/PageNav'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>page</div>
+    <>
+      <section className='flex flex-col'>
+        <PageNav pathname='Overview Page'/>
+      </section>
+    </>
   )
 }
 

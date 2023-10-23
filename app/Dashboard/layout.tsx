@@ -1,4 +1,5 @@
 import MainNav from '@/components/modules/Navigation/MainNav/MainNav'
+import DesktopNav from '@/components/modules/Navigation/Navbar/PageNav'
 import MobileNav from '@/components/modules/Navigation/Navbar/MobileNav'
 import React from 'react'
 
@@ -7,7 +8,7 @@ const layout = ({children} : {children : React.ReactNode}  ) => {
     <div className='flex'>
       <MobileNav/>
       <MainNav/>
-      <main className='bg-sky-300/15 flex-grow-[100] relative'>
+      <main className='bg-sky-300/15 flex-grow-[100]'>
         {children}
       </main>
     </div>

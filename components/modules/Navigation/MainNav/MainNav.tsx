@@ -12,8 +12,8 @@ const MainNav = () => {
   const currentPath = usePathname()
   return (
     <>
-      <aside className='flex-grow-0 hover:flex-grow-[1] hidden lg:block transition-all ease-in bg-slate-900 min-h-screen overflow-x-hidden group'>
-        <div className='h-screen w-full pl-2 py-8 flex flex-col items-center justify-between'>
+      <aside className='relative flex-grow-0 hover:flex-grow-[1] hidden lg:block transition-all ease-in bg-slate-900 min-h-screen overflow-x-hidden group'>
+        <div className='sticky top-0 h-screen w-full pl-2 py-8 flex flex-col items-center justify-between'>
           <nav className='origin-left scale-x-10 flex flex-col items-start justify-start gap-y-3'>
             <NavLink href={'/Dashboard'} className={`text-md font-medium pr-8 text-gray-50 ${currentPath === '/Dashboard' && 'bg-sky-700 ml-2'} rounded-tl-full rounded-bl-full flex items-center justify-start`}>
               <FaChartPie style={{fontSize : '24px', color : "#ffffff"}}/>
