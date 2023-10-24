@@ -12,7 +12,7 @@ const MainNav = () => {
   const currentPath = usePathname()
   return (
     <>
-      <aside className='relative flex-grow-0 hover:flex-grow-[1] hidden lg:block transition-all ease-in bg-slate-900 min-h-screen overflow-x-hidden group'>
+      <aside className='relative flex-grow-0 hover:flex-grow-[1] hidden lg:block transition-all ease-in bg-slate-900 overflow-x-hidden group h-auto'>
         <div className='sticky top-0 h-screen w-full pl-2 py-8 flex flex-col items-center justify-between'>
           <nav className='origin-left scale-x-10 flex flex-col items-start justify-start gap-y-3'>
             <NavLink href={'/Dashboard'} className={`text-md font-medium pr-8 text-gray-50 ${currentPath === '/Dashboard' && 'bg-sky-700 ml-2'} rounded-tl-full rounded-bl-full flex items-center justify-start`}>
@@ -31,7 +31,7 @@ const MainNav = () => {
               <FaUsers style={{fontSize : '24px', color : "#ffffff"}}/>
               <p className="hidden group-hover:block">Teams</p>
             </NavLink>
-            <NavLink href={'/Dashboard/TicketData'} className={`text-md font-medium pr-8 text-gray-50 ${currentPath === '/Dashboard/TicketData' && 'bg-sky-700 ml-2'} rounded-tl-full rounded-bl-full flex items-center justify-start`}>
+            <NavLink href={'/Dashboard/Tickets'} className={`text-md font-medium pr-8 text-gray-50 ${currentPath === '/Dashboard/Tickets' && 'bg-sky-700 ml-2'} rounded-tl-full rounded-bl-full flex items-center justify-start`}>
               <FaTicketAlt style={{fontSize : '24px', color : "#ffffff"}}/>
               <p className="hidden group-hover:block">Ticket Data</p>
             </NavLink>

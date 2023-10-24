@@ -1,14 +1,15 @@
-import MainNav from '@/components/modules/Navigation/MainNav/MainNav'
-import DesktopNav from '@/components/modules/Navigation/Navbar/PageNav'
-import MobileNav from '@/components/modules/Navigation/Navbar/MobileNav'
 import React from 'react'
+import MobileNavbar from '@/components/modules/Navigation/Navbar/MobileNavbar'
+import Sidebar from '@/components/modules/Navigation/Sidebar/Sidebar'
+import Navbar from '@/components/modules/Navigation/Navbar/Navbar'
 
 const layout = ({children} : {children : React.ReactNode}  ) => {
   return (
-    <div className='flex'>
-      <MobileNav/>
-      <MainNav/>
-      <main className='bg-sky-300/15 flex-grow-[100]'>
+    <div className='flex flex-col md:flex-row h-auto'>
+      <MobileNavbar />
+      <Sidebar />
+      <main className='bg-sky-300/15 flex-grow-[100] px-6 py-4'>
+        <Navbar />
         {children}
       </main>
     </div>
